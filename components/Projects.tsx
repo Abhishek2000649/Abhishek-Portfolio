@@ -68,7 +68,7 @@ const Projects: React.FC = () => {
   <img
     src={project.image}
     alt={project.title}
-    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity group-hover:scale-110 transition-transform duration-700"
   />
 
   {/* Optional dark overlay */}

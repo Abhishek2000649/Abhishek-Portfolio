@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-
+import LogoImg from '../assets/AbhishekLogo.jpg'
+import LogoLight from '../assets/LightLogo.png'
 interface NavbarProps {
   darkMode: boolean;
   toggleTheme: () => void;
@@ -47,7 +48,8 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex-shrink-0 font-black text-3xl tracking-tighter text-primary-600 dark:text-primary-400 hover:scale-110 transition-transform cursor-pointer"
           >
-            AK.
+            <img src={darkMode ? LogoImg : LogoLight}  
+            alt="logo" className="w-12 h-12 rounded-full object-cover mr-2" />
           </a>
           
           <div className="hidden md:flex items-center space-x-10">

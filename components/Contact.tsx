@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Abhishek Kumar" 
+                  placeholder="Enter name" 
                   className="w-full px-6 py-4 rounded-2xl bg-slate-50/80 dark:bg-slate-800/80 border-2 border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-950 text-slate-900 dark:text-white outline-none transition-all duration-300 shadow-inner" 
                 />
               </div>

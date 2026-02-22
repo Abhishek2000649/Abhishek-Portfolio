@@ -141,7 +141,7 @@ const Hero: React.FC = () => {
                   <img 
                     src={profile}
                     alt="Abhishek Kumar" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000"
                   />
                   
                   {/* Floating Badge (Top Right) */}
