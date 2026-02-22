@@ -1,26 +1,16 @@
 
 import { Project, Skill, Experience } from './types';
-
+import eventImg from './assets/ems.png';
+import chefkartImg from './assets/chefkart.png';
+import bulkfuelImg from './assets/bulkfuel.png';
+import growthImg from './assets/growth.jpg';
 export const PROJECTS: Project[] = [
+  
   {
     id: 1,
-    title: 'Event Management System',
-    description: 'A comprehensive role-based web application for managing corporate and social events efficiently.',
-    features: [
-      'Role-based system (Admin/Manager/User)',
-      'Event assignment and tracking',
-      'Interactive acceptance/rejection workflow',
-      'Participant management & multi-user sync',
-      'Automated email notifications'
-    ],
-    techStack: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'AJAX', 'Blade'],
-    githubLink: 'https://github.com/Abhishek2000649',
-    demoLink: '#'
-  },
-  {
-    id: 2,
     title: 'ChefKart',
     description: 'A specialized food service booking platform connecting professional chefs with household customers.',
+    image: chefkartImg,
     features: [
       'User authentication & profile management',
       'Service booking workflow',
@@ -33,9 +23,10 @@ export const PROJECTS: Project[] = [
     demoLink: '#'
   },
   {
-    id: 3,
+    id: 2,
     title: 'BulkFuel',
     description: 'B2B e-commerce platform designed for industrial and commercial bulk fuel ordering.',
+    image: bulkfuelImg,
     features: [
       'Quantity-based tiered pricing',
       'Full order lifecycle management',
@@ -45,8 +36,24 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Angular', 'REST APIs'],
     githubLink: 'https://github.com/Abhishek2000649',
+    demoLink: 'https://bulkfuel.vercel.app/'
+  },
+  {
+    id: 3,
+    title: 'Event Management System',
+    description: 'A comprehensive role-based web application for managing corporate and social events efficiently.',
+    image: eventImg,
+    features: [
+      'Role-based system (Admin/Manager/User)',
+      'Event assignment and tracking',
+      'Interactive acceptance/rejection workflow',
+      'Participant management & multi-user sync',
+      'Automated email notifications'
+    ],
+    techStack: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'AJAX', 'Blade'],
+    githubLink: 'https://github.com/Abhishek2000649',
     demoLink: '#'
-  }
+  },
 ];
 
 export const SKILLS: Skill[] = [
@@ -72,6 +79,7 @@ export const INTERNSHIP: Experience = {
   company: 'Aeologic Technologies Pvt Ltd',
   location: 'Noida, Uttar Pradesh',
   period: 'July 2025 – Present',
+  image: growthImg,
   responsibilities: [
     'Gained hands-on experience with PHP and the Laravel framework using MVC architecture.',
     'Assisted in developing features such as routing, controllers, models, and Blade templates.',

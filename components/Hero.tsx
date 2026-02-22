@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-
+import profile from "../assets/Abhishek.png";
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const name = "Abhishek Kumar";
@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Split name into words and then characters to handle spacing and individual animations
   const nameWords = name.split(" ");
   let charCounter = 0;
 
@@ -140,7 +139,7 @@ const Hero: React.FC = () => {
                 {/* Photo Area */}
                 <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                   <img 
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" 
+                    src={profile}
                     alt="Abhishek Kumar" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                   />

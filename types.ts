@@ -7,6 +7,7 @@ export interface Project {
   techStack: string[];
   githubLink: string;
   demoLink: string;
+  image: string; 
 }
 
 export interface Skill {
@@ -21,4 +22,5 @@ export interface Experience {
   location: string;
   period: string;
   responsibilities: string[];
+  image: string;
 }

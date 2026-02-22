@@ -52,16 +52,21 @@ const About: React.FC = () => {
           </div>
 
           <div className="bg-white/80 dark:bg-slate-900/50 backdrop-blur-sm border-2 border-slate-100 dark:border-slate-800 rounded-[3rem] p-10 shadow-xl relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <div className="absolute top-0 right-0 p-8 opacity-60 group-hover:opacity-80 transition-opacity">
+              {/* <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> */}
+              <img
+                src={INTERNSHIP.image}
+                alt="decor"
+                className="w-24 h-24 object-cover rounded-full opacity-60 group-hover:opacity-80 transition-opacity"
+              />
             </div>
             
             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8">Professional Experience</h3>
             <div className="mb-8">
               <h4 className="text-xl font-bold text-primary-600 dark:text-primary-400">{INTERNSHIP.role}</h4>
               <div className="flex flex-col sm:flex-row sm:justify-between text-base text-slate-500 mt-2">
-                <span className="font-bold text-slate-700 dark:text-slate-300 underline decoration-primary-500/30 underline-offset-4">{INTERNSHIP.company}</span>
-                <span className="font-medium">{INTERNSHIP.period}</span>
+                <span className="font-bold text-slate-700 dark:text-slate-300 underline decoration-primary-500/30 underline-offset-4">{INTERNSHIP.company} </span>
+                <span className="font-medium">{INTERNSHIP.period} </span>
               </div>
               <p className="text-sm text-slate-400 mt-1 uppercase tracking-widest">{INTERNSHIP.location}</p>
             </div>

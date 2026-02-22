@@ -43,11 +43,18 @@ const Projects: React.FC = () => {
               key={project.id}
               className="group bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-2 border-slate-100 dark:border-slate-800 rounded-[2.5rem] overflow-hidden flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
-              <div className="h-64 bg-slate-100/50 dark:bg-slate-800/30 flex items-center justify-center p-8 relative overflow-hidden">
+              {/* <div className="h-64 bg-slate-100/50 dark:bg-slate-800/30 flex items-center justify-center p-8 relative overflow-hidden">
                  <div className="absolute inset-0 bg-primary-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-                 <svg className="w-24 h-24 text-primary-600/20 group-hover:scale-110 transition-transform duration-700" fill="currentColor" viewBox="0 0 24 24">
+                 {<svg className="w-24 h-24 text-primary-600/20 group-hover:scale-110 transition-transform duration-700" fill="currentColor" viewBox="0 0 24 24">
                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                 </svg>
+                 </svg> }
+                 <div className="h-64 relative overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+  />
+</div>
                  <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
                     {project.techStack.slice(0, 3).map(tech => (
                       <span key={tech} className="px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-lg bg-white/90 dark:bg-slate-900/90 text-primary-600 shadow-sm">
@@ -55,7 +62,30 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                  </div>
-              </div>
+              </div> */}
+
+              <div className="h-64 relative overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+  />
+
+  {/* Optional dark overlay */}
+  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-500"></div>
+
+  {/* Tech badges */}
+  <div className="absolute bottom-6 left-6 flex flex-wrap gap-2 z-10">
+    {project.techStack.slice(0, 3).map(tech => (
+      <span
+        key={tech}
+        className="px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-lg bg-white/90 dark:bg-slate-900/90 text-primary-600 shadow-sm"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+</div>
               
               <div className="p-10 flex-grow flex flex-col">
                 <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-primary-600 transition-colors">
